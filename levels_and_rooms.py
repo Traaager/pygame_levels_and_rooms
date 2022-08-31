@@ -3,24 +3,21 @@ from pygame.locals import *
 
 pg.init()
 
-disp = pg.display.set_mode((512, 256))
+disp  = pg.display.set_mode((512, 256))
 clock = pg.time.Clock()
 
 SPEED = 5
 
-IMG_LEVEL_STREET = pg.image.load("level1 street.png").convert()
+IMG_STREET = pg.image.load("level1 street.png").convert()
 IMG_HOUSE1 = pg.image.load("level1 house 1.png").convert()
 IMG_HOUSE2 = pg.image.load("level1 house 2.png").convert()
-
 IMG_PLAYER = pg.image.load("player.png").convert_alpha()
-
-IMG_COIN = pg.image.load("coin.png").convert_alpha()
-
-IMG_ENEMY = pg.image.load("enemy.png").convert_alpha()
+IMG_COIN   = pg.image.load("coin.png").convert_alpha()
+IMG_ENEMY  = pg.image.load("enemy.png").convert_alpha()
 
 levels = {
 	"street" : {
-		"bg" : IMG_LEVEL_STREET,
+		"bg" : IMG_STREET,
 		"portals" : [
 			[( 65, 60), "house1", (430, 200)],
 			[(339, 82), "house2", ( 47, 195)],
